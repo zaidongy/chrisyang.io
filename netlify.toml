@@ -1,3 +1,5 @@
 [[redirects]]
   from = "https://cocky-perlman-3a56b9.netlify.com/*"
   to = "https://chrisyang.io/:splat"
+  status = 301
+  force = true
