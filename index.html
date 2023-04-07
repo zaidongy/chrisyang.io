@@ -66,13 +66,15 @@
 
             <!-- Footer -->
             <footer id="footer">
-                <span class="copyright">&copy; Chris Yang.</span>
+                <span id="cpyfooter" class="copyright">""</span>
             </footer>
         </div>
     </div>
     <script>
         window.onload = function () {
             document.body.classList.remove("is-preload");
+            let dt = new Date();
+            document.getElementById('cpyfooter').innerText = "© " + dt.getFullYear() + " Chris Yang.";
         };
         window.ontouchmove = function () {
             return false;
