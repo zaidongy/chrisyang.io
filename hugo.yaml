@@ -8,34 +8,33 @@ buildDrafts: false
 buildFuture: false
 buildExpired: false
 
-build:
-  buildStats:
-    disableClasses: false
-    disableIDs: false
-    disableTags: false
-    enable: false
-
 minify:
   disableXML: true
   minifyOutput: true
 
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # necessary for search
+
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: Chris Yang Hugo Demo
-  description: "Hugo deployed on netlify"
+  title: Chris Yang
+  description: "Personal Website of Chris Yang"
   keywords: [Blog, Portfolio, PaperMod]
   author: Chris Yang
   # author: ["Me", "You"] # multiple authors
-  images: ["<link or path of image for opengraph, twitter-cards>"]
-  DateFormat: "August 2, 2024"
+  # images: ["<link or path of image for opengraph, twitter-cards>"]
+  DateFormat: "January 2, 2006"
   defaultTheme: auto # auto, dark, light
   disableThemeToggle: false
 
   ShowReadingTime: true
-  ShowShareButtons: true
+  ShowShareButtons: false
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
-  ShowCodeCopyButtons: false
+  ShowCodeCopyButtons: true
   ShowWordCount: true
   ShowRssButtonInSectionTermList: true
   UseHugoToc: true
@@ -64,7 +63,7 @@ params:
   # profile-mode
   profileMode:
     enabled: true # needs to be explicitly set
-    title: Chris Yang Profile
+    title: Chris Yang
     subtitle: "ServiceNow | Tennis | Music"
     # imageUrl: "<img location>"
     # imageWidth: 120
