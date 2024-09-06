@@ -3,12 +3,12 @@ title: "My 2nd post"
 date: 2020-09-15T11:30:03+00:00
 # weight: 1
 # aliases: ["/first"]
-category: ["Life"]
+category: ["life"]
 # author: "Me"
 # author: ["Me", "You"] # multiple authors
 showToc: false
 TocOpen: false
-draft: false
+draft: true
 hidemeta: false
 comments: false
 description: "Desc Text."
@@ -36,4 +36,7 @@ editPost:
     appendFilePath: true # to append file path to Edit link
 ---
 
-## Thi is my Second Post
+## This is my Second Post
+
+
+hello world - this is my second post

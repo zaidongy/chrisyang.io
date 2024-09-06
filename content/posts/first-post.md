@@ -9,7 +9,7 @@ tags: ["demo", "testing", "post"]
 # author: ["Me", "You"] # multiple authors
 showToc: false
 TocOpen: false
-draft: false
+draft: true
 hidemeta: false
 comments: false
 description: "First post description"
@@ -33,7 +33,7 @@ cover:
     hidden: true # only hide on current single page
 ---
 
-## Thi is my first post
+## This is my first post
 
 
 ```this is a inline code```
