@@ -1,6 +1,6 @@
 baseURL: "https://1313-idx-chrisyangiogit-1725387864263.cluster-rhptpnrfenhe4qarq36djxjqmg.cloudworkstations.dev"
 title: Chris Yang
-paginate: 4
+paginate: 3
 theme: PaperMod
 
 enableRobotsTXT: true
