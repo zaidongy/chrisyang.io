@@ -1,5 +1,7 @@
-[[redirects]]
-  from = "https://cocky-perlman-3a56b9.netlify.com/*"
-  to = "https://chrisyang.io/:splat"
-  status = 301
-  force = true
+[build.environment]
+HUGO_VERSION = "0.133.1"
+TZ = "America/Los_Angeles"
+
+[build]
+publish = "public"
+command = "hugo --gc --minify"

@@ -1,2 +1,4 @@
-deploycommands.txt
+public/
 .DS_Store
+/.vscode
+/.idx
