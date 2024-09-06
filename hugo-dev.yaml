@@ -1,10 +1,10 @@
 baseURL: "https://1313-idx-chrisyangiogit-1725387864263.cluster-rhptpnrfenhe4qarq36djxjqmg.cloudworkstations.dev"
 title: Chris Yang
-paginate: 3
+paginate: 4
 theme: PaperMod
 
 enableRobotsTXT: true
-buildDrafts: false
+buildDrafts: true
 buildFuture: false
 buildExpired: false
 
@@ -69,9 +69,9 @@ params:
     # imageWidth: 120
     # imageHeight: 120
     # imageTitle: My Profile Image
-    # buttons:
-    #   - name: Posts
-    #     url: posts
+    buttons:
+      - name: Posts
+        url: posts
       # - name: Tags
       #   url: tags
 
@@ -112,16 +112,16 @@ params:
     minMatchCharLength: 0
     limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
     keys: ["title", "permalink", "summary", "content"]
-# menu:
-#   main:
-#     - identifier: categories
-#       name: categories
-#       url: /categories/
-#       weight: 10
-#     - identifier: tags
-#       name: tags
-#       url: /tags/
-#       weight: 20
+menu:
+  main:
+    - identifier: categories
+      name: categories
+      url: /categories/
+      weight: 10
+    - identifier: tags
+      name: tags
+      url: /tags/
+      weight: 20
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:
