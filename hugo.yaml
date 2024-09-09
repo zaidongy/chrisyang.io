@@ -50,8 +50,8 @@ params:
     # disableHLJS: true # to disable highlight.js
     # disableFingerprinting: true
     favicon: "/static/favicon.ico"
-    # favicon16x16: "/static/favicon-16x16.png"
-    # favicon32x32: "/static/favicon-32x32.png"
+    favicon16x16: "/static/favicon.png"
+    favicon32x32: "/static/favicon.png"
     # apple_touch_icon: "<link / abs url>"
     # safari_pinned_tab: "<link / abs url>"
 
@@ -69,9 +69,9 @@ params:
     # imageWidth: 120
     # imageHeight: 120
     # imageTitle: My Profile Image
-    # buttons:
-    #   - name: Posts
-    #     url: posts
+    buttons:
+      - name: Posts
+        url: posts
       # - name: Tags
       #   url: tags
 
@@ -112,16 +112,16 @@ params:
     minMatchCharLength: 0
     limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
     keys: ["title", "permalink", "summary", "content"]
-# menu:
-#   main:
-#     - identifier: categories
-#       name: categories
-#       url: /categories/
-#       weight: 10
-#     - identifier: tags
-#       name: tags
-#       url: /tags/
-#       weight: 20
+menu:
+  main:
+    - identifier: categories
+      name: categories
+      url: /categories/
+      weight: 10
+    - identifier: tags
+      name: tags
+      url: /tags/
+      weight: 20
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:

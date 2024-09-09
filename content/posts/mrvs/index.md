@@ -2,7 +2,7 @@
 title: "How to use multi-row variable set"
 description: "Multi-row variable set demo."
 date: "2024-09-07T21:04:43Z"
-categories: ["Post"]
+categories: ["Service Catalog"]
 tags: ['MRVS', 'Notifications', 'Scripting', 'Variable Sets', 'Multi', 'Catalog Item', 'Xplore']
 # author: "Me"
 showToc: false
