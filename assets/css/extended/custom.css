@@ -1,0 +1,119 @@
+/* Custom Styles for chrisyang.io */
+
+/* Accent color for links - subtle blue */
+:root {
+    --accent-color: #2563eb;
+    --accent-hover: #1d4ed8;
+}
+
+.dark {
+    --accent-color: #60a5fa;
+    --accent-hover: #93c5fd;
+}
+
+/* Link styling */
+a {
+    color: var(--accent-color);
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--accent-hover);
+}
+
+/* Profile mode enhancements */
+.profile .profile_inner {
+    text-align: center;
+}
+
+.profile .profile_inner h1 {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.profile .profile_inner span {
+    color: var(--secondary);
+    font-size: 1.1rem;
+}
+
+/* Button styling in profile mode */
+.button {
+    background: var(--accent-color);
+    color: white;
+    border-radius: 6px;
+    padding: 8px 20px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.button:hover {
+    background: var(--accent-hover);
+    color: white;
+    transform: translateY(-1px);
+}
+
+/* Post entry cards */
+.post-entry {
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post-entry:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Code blocks */
+.highlight {
+    border-radius: 8px;
+}
+
+/* Table of Contents */
+.toc {
+    border-radius: 8px;
+    background: var(--code-bg);
+}
+
+/* Social icons hover effect */
+.social-icons a {
+    transition: transform 0.2s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-2px);
+}
+
+/* Footer */
+.footer {
+    font-size: 0.9rem;
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+    font-size: 0.85rem;
+}
+
+/* Post content readability */
+.post-content {
+    line-height: 1.8;
+}
+
+.post-content p {
+    margin: 1.2em 0;
+}
+
+/* Blockquote styling */
+.post-content blockquote {
+    border-left: 4px solid var(--accent-color);
+    background: var(--code-bg);
+    border-radius: 0 8px 8px 0;
+    padding: 1em 1.5em;
+}
+
+/* Inline code */
+.post-content code {
+    background: var(--code-bg);
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
