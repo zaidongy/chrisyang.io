@@ -150,11 +150,15 @@ UseHugoToc: true
 - First post (demo/testing)
 - Markdown syntax guide (demo)
 
+**Existing Pages:**
+- **About page** (`content/about.md`) - Basic bio, professional skills, personal interests
+- **Search page** - Added to menu, Fuse.js powered
+
 **Missing Content:**
-- About page
 - /now page
 - ServiceNow series posts
 - Author profile content
+- Professional headshot
 
 ---
 
@@ -176,6 +180,15 @@ git submodule update --init --recursive
 - Code syntax highlighting (Chroma/monokai)
 - Responsive design
 - SEO optimized
+
+**Custom Enhancements:**
+- Custom CSS (`assets/css/extended/custom.css`):
+  - Blue accent color scheme (#2563eb)
+  - Button hover effects with shadow
+  - Post entry card animations
+  - Blockquote styling with accent border
+  - Social icon hover transforms
+  - Improved readability (line-height 1.8)
 
 ---
 
