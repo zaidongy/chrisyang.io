@@ -1,0 +1,41 @@
+{
+  "suggestions": {
+    "monday": {
+      "category": "📝 Content",
+      "suggestion": "**Write a 'Now Assist in Action' post.** Document a real implementation you've done at PayPal—what problem it solved, how you configured it, and lessons learned. This is timely AI content that showcases current expertise. Target: 800-1200 words with screenshots.",
+      "action": "Create content/posts/now-assist-{topic}/index.md with your implementation story"
+    },
+    "tuesday": {
+      "category": "🎨 Design",
+      "suggestion": "**Add a professional headshot to your homepage.** The profileMode is enabled but imageUrl is empty. A professional photo builds trust immediately. Use a clean background, business casual, looking at camera. Size: 200x200px minimum.",
+      "action": "Add imageUrl to hugo.yaml profileMode section (create static/profile.jpg first)"
+    },
+    "wednesday": {
+      "category": "🔍 SEO/Technical",
+      "suggestion": "**Optimize your site description.** Current: 'Personal Website of Chris Yang' → Change to: 'ServiceNow Architecture insights, platform best practices, and enterprise implementation guides from a ServiceNow Architect at PayPal.'",
+      "action": "Update params.description in hugo.yaml"
+    },
+    "thursday": {
+      "category": "🤝 Engagement",
+      "suggestion": "**Add an About page.** Create content/about.md with your story: your SN journey, what you specialize in (Now Assist, Catalog, Architecture), and your philosophy. Include a CTA to connect on LinkedIn.",
+      "action": "Create content/about.md and add to menu in hugo.yaml"
+    },
+    "friday": {
+      "category": "📝 Content",
+      "suggestion": "**Create a 'ServiceNow Anti-Patterns' post.** Write about common mistakes you see—like putting business logic in client scripts, overusing global business rules, or hardcoding sys_ids. Practical value + establishes expertise.",
+      "action": "Create content/posts/servicenow-anti-patterns/index.md"
+    },
+    "saturday": {
+      "category": "📊 Analytics",
+      "suggestion": "**Review your GA4 dashboard.** Check: Which posts get traffic? Where do visitors come from? Bounce rate? Use this to prioritize next week's content topics based on what's resonating.",
+      "action": "Log into GA4, note top 3 posts, identify patterns"
+    },
+    "sunday": {
+      "category": "🎨 Design",
+      "suggestion": "**Add a /now page.** Popular in indie web circles—what you're currently working on, learning, reading, listening to. Shows you're active and gives visitors a reason to return.",
+      "action": "Create content/now.md and add to menu"
+    }
+  },
+  "current_week": 1,
+  "notes": "Rotate through suggestions weekly. After week 4, move to more advanced topics."
+}
