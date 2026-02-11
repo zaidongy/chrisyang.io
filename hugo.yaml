@@ -21,11 +21,11 @@ outputs:
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: Chris Yang
-  description: "Personal Website of Chris Yang"
-  keywords: [Blog, Portfolio, PaperMod]
+  description: "ServiceNow Architecture insights, platform best practices, and enterprise implementation guides from a ServiceNow Architect at PayPal."
+  keywords: [ServiceNow, ServiceNow Architecture, ServiceNow Developer, Now Assist, ServiceNow AI, Service Catalog, Flow Designer, ServiceNow Best Practices]
   author: Chris Yang
   # author: ["Me", "You"] # multiple authors
-  # images: ["<link or path of image for opengraph, twitter-cards>"]
+  images: ["/og-image.png"]
   DateFormat: "January 2, 2006"
   defaultTheme: auto # auto, dark, light
   disableThemeToggle: false
@@ -64,11 +64,11 @@ params:
   profileMode:
     enabled: true # needs to be explicitly set
     title: Chris Yang
-    subtitle: "ServiceNow | Tennis | Music"
-    # imageUrl: "<img location>"
-    # imageWidth: 120
-    # imageHeight: 120
-    # imageTitle: My Profile Image
+    subtitle: "ServiceNow Architect | Now Assist | Enterprise Solutions"
+    imageUrl: "/images/profile-placeholder.jpg"
+    imageWidth: 150
+    imageHeight: 150
+    imageTitle: "Chris Yang - ServiceNow Architect"
     buttons:
       - name: Posts
         url: posts
@@ -118,6 +118,10 @@ menu:
       name: about
       url: /about/
       weight: 5
+    - identifier: now
+      name: now
+      url: /now/
+      weight: 7
     - identifier: categories
       name: categories
       url: /categories/
