@@ -323,6 +323,13 @@ git submodule update --remote
 - Keep commits atomic and descriptive
 - Update both hugo.yaml and hugo-dev.yaml when relevant
 
+**Git Workflow:**
+- Only work on branch: `jimmy/project-docs`
+- Fetch often to get the latest remote changes: `git fetch origin`
+- If there are remote changes, pull and merge locally before pushing
+- Never force push to remote
+- Do not modify main/master branch directly
+
 ---
 
 *Last updated: 2026-02-11 by Jimmy 🐠*
