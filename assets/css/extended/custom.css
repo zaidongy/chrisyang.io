@@ -5,12 +5,14 @@
     --accent-color: #2563eb;
     --accent-hover: #1d4ed8;
     --button-text: #ffffff;
+    --button-bg: #2563eb;
 }
 
 .dark {
-    --accent-color: #3b82f6;
-    --accent-hover: #60a5fa;
-    --button-text: #ffffff;
+    --accent-color: #60a5fa;
+    --accent-hover: #93c5fd;
+    --button-text: #0f172a;
+    --button-bg: #60a5fa;
 }
 
 /* Link styling */
@@ -40,7 +42,7 @@ a:hover {
 
 /* Button styling in profile mode - works in both light and dark */
 .profile .buttons .button {
-    background: var(--accent-color) !important;
+    background: var(--button-bg) !important;
     border-radius: 8px;
     margin: 8px;
     padding: 6px;
