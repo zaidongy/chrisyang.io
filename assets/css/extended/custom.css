@@ -4,15 +4,11 @@
 :root {
     --accent-color: #2563eb;
     --accent-hover: #1d4ed8;
-    --button-text: #ffffff;
-    --button-bg: #2563eb;
 }
 
 .dark {
     --accent-color: #60a5fa;
     --accent-hover: #93c5fd;
-    --button-text: #0f172a;
-    --button-bg: #60a5fa;
 }
 
 /* Link styling */
@@ -38,32 +34,6 @@ a:hover {
 .profile .profile_inner span {
     color: var(--secondary);
     font-size: 1.1rem;
-}
-
-/* Button styling in profile mode - works in both light and dark */
-.profile .buttons .button {
-    background: var(--button-bg) !important;
-    border-radius: 8px;
-    margin: 8px;
-    padding: 6px;
-    transition: all 0.2s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.profile .buttons .button:hover {
-    background: var(--accent-hover) !important;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-.profile .buttons .button a {
-    color: var(--button-text) !important;
-    font-weight: 600;
-    font-size: 1rem;
-}
-
-.profile .buttons .button-inner {
-    padding: 6px 16px;
 }
 
 /* Post entry cards */
