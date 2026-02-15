@@ -4,11 +4,13 @@
 :root {
     --accent-color: #2563eb;
     --accent-hover: #1d4ed8;
+    --button-text: #ffffff;
 }
 
 .dark {
-    --accent-color: #60a5fa;
-    --accent-hover: #93c5fd;
+    --accent-color: #3b82f6;
+    --accent-hover: #60a5fa;
+    --button-text: #0f172a;
 }
 
 /* Link styling */
@@ -36,7 +38,7 @@ a:hover {
     font-size: 1.1rem;
 }
 
-/* Button styling in profile mode - override theme defaults */
+/* Button styling in profile mode - works in both light and dark */
 .profile .buttons .button {
     background: var(--accent-color) !important;
     border-radius: 8px;
@@ -53,7 +55,7 @@ a:hover {
 }
 
 .profile .buttons .button a {
-    color: white !important;
+    color: var(--button-text) !important;
     font-weight: 600;
     font-size: 1rem;
 }
@@ -71,6 +73,10 @@ a:hover {
 .post-entry:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dark .post-entry:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* Code blocks */
@@ -120,10 +126,23 @@ a:hover {
     padding: 1em 1.5em;
 }
 
+.dark .post-content blockquote {
+    background: rgba(255, 255, 255, 0.05);
+}
+
 /* Inline code */
 .post-content code {
     background: var(--code-bg);
     padding: 0.2em 0.4em;
     border-radius: 4px;
     font-size: 0.9em;
+}
+
+/* Dark mode specific fixes */
+.dark .post-content code {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.dark .toc {
+    background: rgba(255, 255, 255, 0.05);
 }

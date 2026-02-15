@@ -62,18 +62,15 @@ params:
 
   # profile-mode
   profileMode:
-    enabled: true # needs to be explicitly set
+    enabled: true
     title: Chris Yang
     subtitle: "ServiceNow Architect | Now Assist | Enterprise Solutions"
-    imageUrl: "/images/profile-placeholder.jpg"
-    imageWidth: 150
-    imageHeight: 150
-    imageTitle: "Chris Yang - ServiceNow Architect"
+    # imageUrl removed - no profile image
     buttons:
       - name: Posts
         url: posts
-      # - name: Tags
-      #   url: tags
+      - name: Now
+        url: now
 
   # home-info mode
   homeInfoParams:
@@ -114,14 +111,10 @@ params:
     keys: ["title", "permalink", "summary", "content"]
 menu:
   main:
-    - identifier: about
-      name: about
-      url: /about/
-      weight: 5
     - identifier: now
       name: now
       url: /now/
-      weight: 7
+      weight: 5
     - identifier: categories
       name: categories
       url: /categories/
