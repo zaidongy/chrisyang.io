@@ -146,3 +146,33 @@ a:hover {
 .dark .toc {
     background: rgba(255, 255, 255, 0.05);
 }
+
+/* Tag styling - fix light mode accessibility */
+.post-tags a {
+    background: var(--tertiary);
+    color: var(--primary);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.85em;
+}
+
+.post-tags a:hover {
+    background: var(--accent-color);
+    color: white;
+}
+
+.dark .post-tags a {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--primary);
+}
+
+/* Entry tags in list views */
+.entry-tags a {
+    background: var(--tertiary);
+    color: var(--primary);
+}
+
+.entry-tags a:hover {
+    background: var(--accent-color);
+    color: white;
+}
