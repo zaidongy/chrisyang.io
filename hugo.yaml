@@ -8,6 +8,7 @@ buildDrafts: false
 buildFuture: false
 buildExpired: false
 
+
 minify:
   disableXML: true
   minifyOutput: true
@@ -60,7 +61,7 @@ params:
     icon: /apple-touch-icon.png
     iconHeight: 35
 
-  # profile-mode
+  # profile-mode 
   profileMode:
     enabled: true # needs to be explicitly set
     title: Chris Yang
