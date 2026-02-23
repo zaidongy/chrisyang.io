@@ -70,8 +70,8 @@ params:
     # imageHeight: 120
     # imageTitle: My Profile Image
     buttons:
-      - name: Posts
-        url: posts
+      # - name: Posts
+      #   url: posts
       # - name: Tags
       #   url: tags
 

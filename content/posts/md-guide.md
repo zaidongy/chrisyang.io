@@ -16,6 +16,8 @@ UseHugoToc: true
 draft: true
 ---
 
+## This is a draft testing article, it will not be rendered in production
+
 This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.
 
 <!--more-->

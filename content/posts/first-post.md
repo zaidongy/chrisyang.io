@@ -32,6 +32,7 @@ cover:
     relative: false # when using page bundles set this to true
     hidden: true # only hide on current single page
 ---
+## This is a draft testing article, it will not be rendered in production
 
 ## This is my first post
 
