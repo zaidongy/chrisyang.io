@@ -16,7 +16,7 @@ Professional branding focus: ServiceNow Architecture expertise, clean design, kn
 - [ ] **Custom App Development** - Scoped apps, ATF testing, source control
 
 ### Thought Leadership
-- [ ] **"Why ServiceNow Projects Fail"** - Common anti-patterns you've seen
+- [x] **"Why ServiceNow Projects Fail"** - Common anti-patterns you've seen → Published as "ServiceNow Anti-Patterns: 5 Mistakes That Come Back to Haunt You"
 - [ ] **Architect Decision Framework** - How you evaluate build vs buy
 - [ ] **Platform Roadmap Reactions** - Your take on new releases (quarterly)
 
