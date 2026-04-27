@@ -24,7 +24,7 @@ Added to `package.json` as production dependencies.
 ## Scroll Behavior
 
 - **Pinning**: Each section pins when scrolled into view and stays pinned for the duration of its entrance animation timeline
-- **Snap**: When the user stops scrolling, the viewport snaps to the nearest section boundary
+- **Snap**: Proximity-based snap — when the user stops scrolling near a section boundary, the viewport snaps to it. Does not force snap if the user scrolls past the midpoint, avoiding the feeling of being trapped
 - **Easing**: All animations use smooth deceleration eases (`power2.out` or `power3.out`) so motion feels controlled and intentional
 - **Smooth scroll**: Retain existing `scroll-behavior: smooth` CSS as a baseline
 
