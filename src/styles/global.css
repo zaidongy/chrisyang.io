@@ -379,6 +379,10 @@ body::before {
   max-width: 560px;
 }
 
+.bio-line {
+  display: block;
+}
+
 .about-links {
   display: flex;
   gap: 24px;
