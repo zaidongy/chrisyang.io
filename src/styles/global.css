@@ -45,6 +45,7 @@ body::before {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .prompt-line {
@@ -87,7 +88,7 @@ body::before {
 /* ── Scene 2: Portfolio ── */
 
 .portfolio {
-  position: fixed;
+  position: absolute;
   inset: 0;
   display: flex;
   flex-direction: column;
@@ -409,6 +410,21 @@ body::before {
   font-size: 11px;
   color: var(--text-dim);
   margin-top: auto;
+}
+
+.footer-links {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-links a {
+  color: var(--green);
+  text-decoration: none;
+  transition: text-shadow 0.2s;
+}
+
+.footer-links a:hover {
+  text-shadow: 0 0 8px rgba(51, 255, 51, 0.4);
 }
 
 

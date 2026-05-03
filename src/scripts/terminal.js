@@ -26,7 +26,6 @@ function typeString(text, speed, callback) {
 function skipIntro() {
   promptLine.style.display = 'none';
   portfolio.classList.add('visible');
-  document.body.style.overflow = 'auto';
   portfolio.dispatchEvent(new Event('portfolio-ready'));
 }
 
@@ -64,7 +63,6 @@ function enter() {
 
   promptLine.addEventListener('animationend', () => {
     promptLine.style.display = 'none';
-    document.body.style.overflow = 'auto';
     portfolio.dispatchEvent(new Event('portfolio-ready'));
   }, { once: true });
 }

@@ -1,23 +1,11 @@
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
-
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const SCROLLER = '.portfolio';
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const isMobile = matchMedia('(max-width: 767px)').matches;
-let isAnimating = false;
 
-function lockScroll() {
-  isAnimating = true;
-  document.querySelector(SCROLLER).style.overflowY = 'hidden';
-}
-
-function unlockScroll() {
-  isAnimating = false;
-  document.querySelector(SCROLLER).style.overflowY = 'auto';
-}
+ScrollTrigger.defaults({ scroller: SCROLLER });
 
 function splitTextToChars(element) {
   const children = Array.from(element.childNodes);
@@ -62,34 +50,34 @@ function initHeroAnimation() {
 
   const duration = isMobile ? 0.3 : 0.5;
 
-  const tl = gsap.timeline({ paused: true });
-
-  tl.from('.hero-title .char', {
+  gsap.fromTo('.hero-title .char', {
     y: 20,
     opacity: 0,
+  }, {
+    y: 0,
+    opacity: 1,
     stagger: 0.03,
     ease: 'power2.out',
     duration: duration,
   });
 
-  tl.from(sub, {
+  gsap.fromTo(sub, {
     y: 30,
     opacity: 0,
+  }, {
+    y: 0,
+    opacity: 1,
     ease: 'power2.out',
     duration: duration + 0.1,
-  }, `-=${duration * 0.6}`);
+    delay: duration * 0.4,
+  });
 
-  tl.to('.hero-title .green', {
+  gsap.to('.hero-title .green', {
     textShadow: '0 0 20px rgba(51, 255, 51, 0.5)',
     duration: 0.4,
     ease: 'power2.out',
-  }, `-=${duration * 0.4}`);
-
-  tl.eventCallback('onComplete', unlockScroll);
-
-  // Hero is visible immediately — play right away with scroll lock
-  lockScroll();
-  tl.play();
+    delay: duration * 0.6,
+  });
 }
 
 // ── Services: Alternating Cascade ──
@@ -102,35 +90,38 @@ function initServicesAnimation() {
   const duration = isMobile ? 0.4 : 0.6;
   const stagger = isMobile ? 0.1 : 0.15;
 
-  const tl = gsap.timeline({ paused: true });
-
-  tl.from(heading, {
+  gsap.fromTo(heading, {
     y: 20,
     opacity: 0,
+  }, {
+    y: 0,
+    opacity: 1,
     ease: 'power2.out',
     duration: 0.4,
+    scrollTrigger: {
+      trigger: '#services',
+      start: 'top 80%',
+      once: true,
+    },
   });
 
   services.forEach((service, i) => {
     const fromX = isMobile ? -50 : (i % 2 === 0 ? -50 : 50);
-    tl.from(service, {
+    gsap.fromTo(service, {
       x: fromX,
       opacity: 0,
+    }, {
+      x: 0,
+      opacity: 1,
       ease: 'power2.out',
       duration: duration,
-    }, i === 0 ? `-=${duration * 0.3}` : `>+=${stagger}`);
-  });
-
-  tl.eventCallback('onComplete', unlockScroll);
-
-  ScrollTrigger.create({
-    trigger: '#services',
-    scroller: SCROLLER,
-    start: 'top 80%',
-    onEnter: () => {
-      lockScroll();
-      tl.play();
-    },
+      delay: 0.2 + i * stagger,
+      scrollTrigger: {
+        trigger: '#services',
+        start: 'top 80%',
+        once: true,
+      },
+    });
   });
 }
 
@@ -144,37 +135,48 @@ function initPostsAnimation() {
 
   const duration = isMobile ? 0.4 : 0.6;
 
-  const tl = gsap.timeline({ paused: true });
-
-  tl.from(heading, {
+  gsap.fromTo(heading, {
     y: 20,
     opacity: 0,
+  }, {
+    y: 0,
+    opacity: 1,
     ease: 'power2.out',
     duration: 0.4,
+    scrollTrigger: {
+      trigger: '#posts',
+      start: 'top 80%',
+      once: true,
+    },
   });
 
-  tl.from(activeCard, {
+  gsap.fromTo(activeCard, {
     x: 80,
     opacity: 0,
+  }, {
+    x: 0,
+    opacity: 1,
     ease: 'power3.out',
     duration: duration,
-  }, '-=0.2');
+    delay: 0.2,
+    scrollTrigger: {
+      trigger: '#posts',
+      start: 'top 80%',
+      once: true,
+    },
+  });
 
-  tl.from(nav, {
+  gsap.fromTo(nav, {
     opacity: 0,
+  }, {
+    opacity: 1,
     ease: 'power2.out',
     duration: 0.3,
-  }, '-=0.2');
-
-  tl.eventCallback('onComplete', unlockScroll);
-
-  ScrollTrigger.create({
-    trigger: '#posts',
-    scroller: SCROLLER,
-    start: 'top 80%',
-    onEnter: () => {
-      lockScroll();
-      tl.play();
+    delay: 0.4,
+    scrollTrigger: {
+      trigger: '#posts',
+      start: 'top 80%',
+      once: true,
     },
   });
 }
@@ -190,93 +192,54 @@ function initAboutAnimation() {
   const duration = isMobile ? 0.35 : 0.5;
   const stagger = isMobile ? 0.08 : 0.12;
 
-  const tl = gsap.timeline({ paused: true });
-
-  tl.from(heading, {
+  gsap.fromTo(heading, {
     y: 20,
     opacity: 0,
+  }, {
+    y: 0,
+    opacity: 1,
     ease: 'power2.out',
     duration: 0.4,
-  });
-
-  tl.from(lines, {
-    y: 20,
-    opacity: 0,
-    stagger: stagger,
-    ease: 'power2.out',
-    duration: duration,
-  }, '-=0.2');
-
-  tl.from(links, {
-    y: 15,
-    opacity: 0,
-    stagger: stagger,
-    ease: 'power2.out',
-    duration: duration,
-  }, '-=0.2');
-
-  tl.to(links, {
-    textShadow: '0 0 8px rgba(51, 255, 51, 0.4)',
-    duration: 0.3,
-    ease: 'power2.out',
-  }, '-=0.2');
-
-  tl.eventCallback('onComplete', unlockScroll);
-
-  ScrollTrigger.create({
-    trigger: '#about',
-    scroller: SCROLLER,
-    start: 'top 80%',
-    onEnter: () => {
-      lockScroll();
-      tl.play();
+    scrollTrigger: {
+      trigger: '#about',
+      start: 'top 80%',
+      once: true,
     },
   });
-}
 
-// ── Snap with Easing ──
+  gsap.fromTo(lines, {
+    y: 20,
+    opacity: 0,
+  }, {
+    y: 0,
+    opacity: 1,
+    stagger: stagger,
+    ease: 'power2.out',
+    duration: duration,
+    delay: 0.2,
+    scrollTrigger: {
+      trigger: '#about',
+      start: 'top 80%',
+      once: true,
+    },
+  });
 
-function initSnap() {
-  const scroller = document.querySelector(SCROLLER);
-  const sections = document.querySelectorAll('.hero, #services, #posts, #about');
-  let snapTimeout;
-
-  scroller.addEventListener('scroll', () => {
-    if (isAnimating) return;
-    clearTimeout(snapTimeout);
-    snapTimeout = setTimeout(() => {
-      if (isAnimating) return;
-
-      const scrollTop = scroller.scrollTop;
-      const viewportHeight = scroller.clientHeight;
-      const scrollCenter = scrollTop + viewportHeight / 2;
-
-      let closest = null;
-      let closestDist = Infinity;
-
-      sections.forEach(section => {
-        const sectionCenter = section.offsetTop + section.offsetHeight / 2;
-        const dist = Math.abs(scrollCenter - sectionCenter);
-        if (dist < closestDist) {
-          closestDist = dist;
-          closest = section;
-        }
-      });
-
-      // Only snap if within 35% of viewport height
-      if (closest && closestDist < viewportHeight * 0.35) {
-        const targetTop = closest.offsetTop;
-        // Only snap if not already there
-        if (Math.abs(scrollTop - targetTop) > 5) {
-          gsap.to(scroller, {
-            scrollTo: { y: targetTop },
-            duration: 0.6,
-            ease: 'power2.out',
-          });
-        }
-      }
-    }, 150);
-  }, { passive: true });
+  gsap.fromTo(links, {
+    y: 15,
+    opacity: 0,
+  }, {
+    y: 0,
+    opacity: 1,
+    stagger: stagger,
+    ease: 'power2.out',
+    duration: duration,
+    delay: 0.3,
+    scrollTrigger: {
+      trigger: '#about',
+      start: 'top 80%',
+      once: true,
+    },
+  });
 }
 
 // ── Init ──
@@ -293,7 +256,9 @@ function init() {
   initServicesAnimation();
   initPostsAnimation();
   initAboutAnimation();
-  initSnap();
+
+  // Refresh after a short delay to ensure layout has settled
+  setTimeout(() => ScrollTrigger.refresh(), 100);
 }
 
 // Wait for portfolio to be visible (after terminal intro)
