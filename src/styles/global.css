@@ -167,6 +167,15 @@ body::before {
   padding: 80px 32px;
   text-align: center;
   scroll-snap-align: start;
+  background-color: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
 }
 
 .hero-title {
@@ -176,6 +185,7 @@ body::before {
   letter-spacing: -0.04em;
   line-height: 1;
   color: var(--text);
+  text-align: center;
 }
 
 .green { color: var(--green); text-shadow: 0 0 20px rgba(51, 255, 51, 0.3); }
@@ -206,24 +216,35 @@ body::before {
 }
 
 .hero-sub {
-  margin-top: 24px;
+  margin: 24px auto 0;
   font-size: 15px;
   color: var(--text-dim);
   max-width: 480px;
   line-height: 1.6;
+  text-align: center;
 }
 
 /* Sections */
 .section {
   padding: 80px 32px;
-  max-width: 900px;
-  margin: 0 auto;
   width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   scroll-snap-align: start;
+  background-color: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.section-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.section:nth-child(even of .section) {
+  background-color: var(--bg-section);
 }
 
 .section-heading {
