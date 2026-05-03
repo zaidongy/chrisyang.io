@@ -1,5 +1,6 @@
-public/
+dist/
+node_modules/
 .DS_Store
 /.vscode
 /.idx
-hugo-dev.yaml
+/.superpowers/

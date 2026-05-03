@@ -1,0 +1,57 @@
+---
+import '../../styles/global.css';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  return posts.map(post => ({
+    params: { id: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{post.data.title} — chrisyang.io</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>" />
+</head>
+<body>
+<div class="screen" id="screen">
+  <div class="portfolio visible" role="main">
+    <nav class="nav">
+      <a href="/" class="nav-brand">~/chrisyang</a>
+      <div class="nav-links">
+        <a href="/#posts">/posts</a>
+        <a href="/#about">/about</a>
+      </div>
+    </nav>
+
+    <article class="section post-article">
+      <span class="work-type">// {post.data.tag}</span>
+      <h1 class="post-title">{post.data.title}</h1>
+      <time class="post-date">{post.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+      <div class="post-body">
+        <Content />
+      </div>
+      <a href="/#posts" class="work-link">&larr; back to posts</a>
+    </article>
+
+    <footer class="footer">
+      <span>&copy; 2026 Chris Yang. All rights reserved.</span>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/zaidongy/" target="_blank" rel="noopener">linkedin</a>
+        <a href="https://github.com/zaidongy" target="_blank" rel="noopener">github</a>
+        <a href="mailto:chris@chrisyang.io">email</a>
+      </div>
+    </footer>
+  </div>
+</div>
+</body>
+</html>

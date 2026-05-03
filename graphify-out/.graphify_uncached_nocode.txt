@@ -1,0 +1,16 @@
+/Users/chrisyang/code/chrisyang.io/.claude/worktrees/portfolio-revamp/docs/superpowers/plans/2026-04-26-scroll-animations.md
+/Users/chrisyang/code/chrisyang.io/.claude/worktrees/portfolio-revamp/docs/superpowers/specs/2026-04-26-scroll-animations-design.md
+/Users/chrisyang/code/chrisyang.io/.claude/worktrees/portfolio-revamp/src/content/posts/resilient-integrations.md
+/Users/chrisyang/code/chrisyang.io/.claude/worktrees/portfolio-revamp/src/content/posts/scaling-servicenow-apps.md
+/Users/chrisyang/code/chrisyang.io/.claude/worktrees/portfolio-revamp/src/content/posts/cicd-servicenow-guide.md
+/Users/chrisyang/code/chrisyang.io/.claude/worktrees/portfolio-revamp/src/content/posts/flow-designer-vs-workflow.md
+/Users/chrisyang/code/chrisyang.io/.claude/worktrees/portfolio-revamp/hero-animation.png
+/Users/chrisyang/code/chrisyang.io/.claude/worktrees/portfolio-revamp/2-intro-fresh.png
+/Users/chrisyang/code/chrisyang.io/.claude/worktrees/portfolio-revamp/8-mobile-services.png
+/Users/chrisyang/code/chrisyang.io/.claude/worktrees/portfolio-revamp/5-posts.png
+/Users/chrisyang/code/chrisyang.io/.claude/worktrees/portfolio-revamp/7-mobile-hero.png
+/Users/chrisyang/code/chrisyang.io/.claude/worktrees/portfolio-revamp/3-hero.png
+/Users/chrisyang/code/chrisyang.io/.claude/worktrees/portfolio-revamp/9-post-detail.png
+/Users/chrisyang/code/chrisyang.io/.claude/worktrees/portfolio-revamp/4-services.png
+/Users/chrisyang/code/chrisyang.io/.claude/worktrees/portfolio-revamp/6-about.png
+/Users/chrisyang/code/chrisyang.io/.claude/worktrees/portfolio-revamp/1-intro-screen.png

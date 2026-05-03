@@ -1,0 +1,82 @@
+{
+  "/Users/chrisyang/code/chrisyang.io/.claude/worktrees/portfolio-revamp/astro.config.mjs": {
+    "mtime": 1777226638.733309,
+    "hash": "a829f835226b9b50b8f91290447f427f"
+  },
+  "/Users/chrisyang/code/chrisyang.io/.claude/worktrees/portfolio-revamp/src/content.config.ts": {
+    "mtime": 1777248707.3670137,
+    "hash": "ab37f4a5b044a54c77ed8ab52f81b513"
+  },
+  "/Users/chrisyang/code/chrisyang.io/.claude/worktrees/portfolio-revamp/src/scripts/terminal.js": {
+    "mtime": 1777262461.7924755,
+    "hash": "0650d8863d15d77ce4141be6c3a09478"
+  },
+  "/Users/chrisyang/code/chrisyang.io/.claude/worktrees/portfolio-revamp/src/scripts/scroll-animations.js": {
+    "mtime": 1777263146.7693028,
+    "hash": "7d463592a3ae040362f2e52e61302046"
+  },
+  "/Users/chrisyang/code/chrisyang.io/.claude/worktrees/portfolio-revamp/docs/superpowers/plans/2026-04-26-scroll-animations.md": {
+    "mtime": 1777261297.1100469,
+    "hash": "6c8a618616a1ad9637a01646c19f1fac"
+  },
+  "/Users/chrisyang/code/chrisyang.io/.claude/worktrees/portfolio-revamp/docs/superpowers/specs/2026-04-26-scroll-animations-design.md": {
+    "mtime": 1777260790.2835631,
+    "hash": "fbc845cb9b513c7bf7f6b1c898643b47"
+  },
+  "/Users/chrisyang/code/chrisyang.io/.claude/worktrees/portfolio-revamp/src/content/posts/resilient-integrations.md": {
+    "mtime": 1777248744.1491082,
+    "hash": "f93abb623bda7593be8597ba7664e28c"
+  },
+  "/Users/chrisyang/code/chrisyang.io/.claude/worktrees/portfolio-revamp/src/content/posts/scaling-servicenow-apps.md": {
+    "mtime": 1777248742.3142836,
+    "hash": "a87ca36b2edb1833272464260b9b61c3"
+  },
+  "/Users/chrisyang/code/chrisyang.io/.claude/worktrees/portfolio-revamp/src/content/posts/cicd-servicenow-guide.md": {
+    "mtime": 1777248744.6562061,
+    "hash": "c9461dc54c2f74249baf9bbc9c8397b7"
+  },
+  "/Users/chrisyang/code/chrisyang.io/.claude/worktrees/portfolio-revamp/src/content/posts/flow-designer-vs-workflow.md": {
+    "mtime": 1777248743.4974182,
+    "hash": "fec9ef3dfe4879ffdb191c747ce63460"
+  },
+  "/Users/chrisyang/code/chrisyang.io/.claude/worktrees/portfolio-revamp/hero-animation.png": {
+    "mtime": 1777263432.210561,
+    "hash": "374974c8e36ebf796d71c2b7424c76a7"
+  },
+  "/Users/chrisyang/code/chrisyang.io/.claude/worktrees/portfolio-revamp/2-intro-fresh.png": {
+    "mtime": 1777264328.1457438,
+    "hash": "2c47cd5a98d388335ae2d0d7ca9090cb"
+  },
+  "/Users/chrisyang/code/chrisyang.io/.claude/worktrees/portfolio-revamp/8-mobile-services.png": {
+    "mtime": 1777264969.640785,
+    "hash": "8f251747457dad88cb4dd78b3c79a161"
+  },
+  "/Users/chrisyang/code/chrisyang.io/.claude/worktrees/portfolio-revamp/5-posts.png": {
+    "mtime": 1777264679.7272704,
+    "hash": "1080acf31464a6d6c772282417a4e93f"
+  },
+  "/Users/chrisyang/code/chrisyang.io/.claude/worktrees/portfolio-revamp/7-mobile-hero.png": {
+    "mtime": 1777264905.2053664,
+    "hash": "5de66562f6f065d117410df3ad8c5672"
+  },
+  "/Users/chrisyang/code/chrisyang.io/.claude/worktrees/portfolio-revamp/3-hero.png": {
+    "mtime": 1777264529.197711,
+    "hash": "374974c8e36ebf796d71c2b7424c76a7"
+  },
+  "/Users/chrisyang/code/chrisyang.io/.claude/worktrees/portfolio-revamp/9-post-detail.png": {
+    "mtime": 1777265074.0850008,
+    "hash": "6d1bfaf127e1d569bdc549f44cf6e97f"
+  },
+  "/Users/chrisyang/code/chrisyang.io/.claude/worktrees/portfolio-revamp/4-services.png": {
+    "mtime": 1777264633.7516022,
+    "hash": "4973e59c51e64a4a811cc931a67b363c"
+  },
+  "/Users/chrisyang/code/chrisyang.io/.claude/worktrees/portfolio-revamp/6-about.png": {
+    "mtime": 1777264741.753254,
+    "hash": "ef585bd393c8744b750f0e5088352a23"
+  },
+  "/Users/chrisyang/code/chrisyang.io/.claude/worktrees/portfolio-revamp/1-intro-screen.png": {
+    "mtime": 1777264266.8400238,
+    "hash": "374974c8e36ebf796d71c2b7424c76a7"
+  }
+}

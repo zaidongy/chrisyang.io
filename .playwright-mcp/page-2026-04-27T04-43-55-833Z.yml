@@ -1,0 +1,39 @@
+- generic [active] [ref=e1]:
+  - main [ref=e3]:
+    - navigation [ref=e4]:
+      - link "~/chrisyang" [ref=e5] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e6]:
+        - link "/posts" [ref=e7] [cursor=pointer]:
+          - /url: /#posts
+        - link "/about" [ref=e8] [cursor=pointer]:
+          - /url: /#about
+    - article [ref=e9]:
+      - generic [ref=e10]: // devx
+      - 'heading "CI/CD for ServiceNow: A Practical Guide" [level=1] [ref=e11]'
+      - time [ref=e12]: March 29, 2026
+      - paragraph [ref=e14]: Source control, automated testing, and deployment pipelines arenâ€™t just for web developers. Hereâ€™s how to bring modern DevOps to the platform.
+      - 'link "â† back to posts" [ref=e15] [cursor=pointer]':
+        - /url: /#posts
+    - generic [ref=e16]:
+      - generic [ref=e17]: © 2026 Chris Yang. All rights reserved.
+      - generic [ref=e18]:
+        - link "linkedin" [ref=e19] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/zaidongy/
+        - link "github" [ref=e20] [cursor=pointer]:
+          - /url: https://github.com/zaidongy
+        - link "email" [ref=e21] [cursor=pointer]:
+          - /url: mailto:hello@chrisyang.io
+  - generic [ref=e24]:
+    - button "Menu" [ref=e25]:
+      - img [ref=e27]
+      - generic: Menu
+    - button "Inspect" [ref=e31]:
+      - img [ref=e33]
+      - generic: Inspect
+    - button "Audit" [ref=e35]:
+      - img [ref=e37]
+      - generic: Audit
+    - button "Settings" [ref=e40]:
+      - img [ref=e42]
+      - generic: Settings
