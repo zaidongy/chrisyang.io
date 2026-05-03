@@ -99,6 +99,7 @@ body::before {
               opacity 0.4s ease 0.15s;
   overflow-y: auto;
   scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
   scroll-padding-top: 80px;
   scrollbar-width: thin;
   scrollbar-color: var(--border) transparent;
@@ -165,6 +166,7 @@ body::before {
   min-height: 100vh;
   padding: 80px 32px;
   text-align: center;
+  scroll-snap-align: start;
 }
 
 .hero-title {
@@ -221,6 +223,7 @@ body::before {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  scroll-snap-align: start;
 }
 
 .section-heading {
@@ -471,6 +474,7 @@ body::before {
     transform: none;
     transition: opacity 0.2s;
     scroll-behavior: auto;
+    scroll-snap-type: none;
   }
   .hero-title .char,
   .hero-sub,
