@@ -152,10 +152,8 @@ function initPostsAnimation() {
 
   gsap.fromTo(activeCard, {
     x: 80,
-    opacity: 0,
   }, {
     x: 0,
-    opacity: 1,
     ease: 'power3.out',
     duration: duration,
     delay: 0.2,
@@ -167,9 +165,9 @@ function initPostsAnimation() {
   });
 
   gsap.fromTo(nav, {
-    opacity: 0,
+    y: 10,
   }, {
-    opacity: 1,
+    y: 0,
     ease: 'power2.out',
     duration: 0.3,
     delay: 0.4,

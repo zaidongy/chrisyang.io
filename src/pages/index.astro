@@ -30,74 +30,82 @@ const posts = await getCollection('posts');
 
     <!-- Hero -->
     <section class="hero">
-      <h1 class="hero-title">chris<span class="green">yang</span></h1>
-      <p class="hero-sub">turning complexity into clarity on the servicenow platform on and off the clock.</p>
+      <div class="hero-inner">
+        <h1 class="hero-title">chris<span class="green">yang</span></h1>
+        <p class="hero-sub">turning complexity into clarity on the servicenow platform on and off the clock.</p>
+      </div>
     </section>
 
     <!-- Services -->
     <section id="services" class="section">
-      <h2 class="section-heading">/services</h2>
-      <div class="services">
-        <div class="service">
-          <span class="service-num">01</span>
-          <h3>/platform development</h3>
-          <p>Building scalable applications on the ServiceNow platform — from custom apps to integrations that actually work.</p>
-        </div>
-        <div class="service">
-          <span class="service-num">02</span>
-          <h3>/automation & workflows</h3>
-          <p>Designing flows that eliminate manual processes. If you're doing it twice, it should be automated.</p>
-        </div>
-        <div class="service">
-          <span class="service-num">03</span>
-          <h3>/system architecture</h3>
-          <p>Structuring data models, integrations, and governance so the platform doesn't become the problem.</p>
-        </div>
-        <div class="service">
-          <span class="service-num">04</span>
-          <h3>/developer experience</h3>
-          <p>Tooling, CI/CD, and practices that make building on the platform feel like building anywhere else.</p>
+      <div class="section-inner">
+        <h2 class="section-heading">/services</h2>
+        <div class="services">
+          <div class="service">
+            <span class="service-num">01</span>
+            <h3>/platform development</h3>
+            <p>Building scalable applications on the ServiceNow platform — from custom apps to integrations that actually work.</p>
+          </div>
+          <div class="service">
+            <span class="service-num">02</span>
+            <h3>/automation & workflows</h3>
+            <p>Designing flows that eliminate manual processes. If you're doing it twice, it should be automated.</p>
+          </div>
+          <div class="service">
+            <span class="service-num">03</span>
+            <h3>/system architecture</h3>
+            <p>Structuring data models, integrations, and governance so the platform doesn't become the problem.</p>
+          </div>
+          <div class="service">
+            <span class="service-num">04</span>
+            <h3>/developer experience</h3>
+            <p>Tooling, CI/CD, and practices that make building on the platform feel like building anywhere else.</p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Posts -->
     <section id="posts" class="section">
-      <h2 class="section-heading">/posts</h2>
-      <div class="work-slider" id="work-slider">
-        {posts.map((post, i) => (
-          <div class:list={['work-card', { active: i === 0 }]} data-index={i}>
-            <div class="work-card-header">
-              <span class="work-num">{String(i + 1).padStart(2, '0')}</span>
-              <span class="work-type">// {post.data.tag}</span>
+      <div class="section-inner">
+        <h2 class="section-heading">/posts</h2>
+        <div class="work-slider" id="work-slider">
+          {posts.map((post, i) => (
+            <div class:list={['work-card', { active: i === 0 }]} data-index={i}>
+              <div class="work-card-header">
+                <span class="work-num">{String(i + 1).padStart(2, '0')}</span>
+                <span class="work-type">// {post.data.tag}</span>
+              </div>
+              <h3>{post.data.title}</h3>
+              <p>{post.data.description}</p>
+              <a href={`/posts/${post.id.replace(/\.md$/, '')}`} class="work-link">read post →</a>
             </div>
-            <h3>{post.data.title}</h3>
-            <p>{post.data.description}</p>
-            <a href={`/posts/${post.id}`} class="work-link">read post →</a>
-          </div>
-        ))}
-      </div>
-      <div class="work-nav">
-        <button id="work-prev" aria-label="Previous">&#8592;</button>
-        <span class="work-counter"><span id="work-current">1</span> / <span id="work-total">{posts.length}</span></span>
-        <button id="work-next" aria-label="Next">&#8594;</button>
+          ))}
+        </div>
+        <div class="work-nav">
+          <button id="work-prev" aria-label="Previous">&#8592;</button>
+          <span class="work-counter"><span id="work-current">1</span> / <span id="work-total">{posts.length}</span></span>
+          <button id="work-next" aria-label="Next">&#8594;</button>
+        </div>
       </div>
     </section>
 
     <!-- About -->
     <section id="about" class="section">
-      <h2 class="section-heading">/about</h2>
-      <div class="about-content">
-        <p class="about-bio">
-  <span class="bio-line">12 years deep in ServiceNow.</span>
-  <span class="bio-line">Certified Technical Architect.</span>
-  <span class="bio-line">Knowledge speaker.</span>
-  <span class="bio-line">Detail-oriented builder currently exploring where AI meets enterprise automation.</span>
-</p>
-        <div class="about-links">
-          <a href="https://www.linkedin.com/in/zaidongy/" target="_blank" rel="noopener" class="about-link">linkedin -></a>
-          <a href="https://github.com/zaidongy" target="_blank" rel="noopener" class="about-link">github -></a>
-          <a href="mailto:chris@chrisyang.io" class="about-link">email -></a>
+      <div class="section-inner">
+        <h2 class="section-heading">/about</h2>
+        <div class="about-content">
+          <p class="about-bio">
+    <span class="bio-line">12 years deep in ServiceNow</span>
+    <span class="bio-line">Certified Technical Architect</span>
+    <span class="bio-line">2x Knowledge conference speaker</span>
+    <span class="bio-line">AI Native and automating with ServiceNow</span>
+  </p>
+          <div class="about-links">
+            <a href="https://www.linkedin.com/in/zaidongy/" target="_blank" rel="noopener" class="about-link">linkedin -></a>
+            <a href="https://github.com/zaidongy" target="_blank" rel="noopener" class="about-link">github -></a>
+            <a href="mailto:chris@chrisyang.io" class="about-link">email -></a>
+          </div>
         </div>
       </div>
     </section>
