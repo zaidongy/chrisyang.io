@@ -7,3 +7,4 @@ node_modules/
 .playwright-mcp/
 desktop-wide-*.png
 section-services-wide.png
+package-lock.json
