@@ -34,7 +34,7 @@ const { Content } = await render(post);
   <article class="post-article">
     <span class="work-type">// {post.data.tag}</span>
     <h1 class="post-title">{post.data.title}</h1>
-    <time class="post-date">{post.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+    <time class="post-date">{post.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' })}</time>
     <div class="post-body">
       <Content />
     </div>

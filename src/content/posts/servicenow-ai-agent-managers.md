@@ -1,6 +1,6 @@
 ---
 title: "AI Driven Development in ServiceNow"
-pubDate: 2026-05-16
+pubDate: 2026-05-11
 description: "ServiceNow's Fluent SDK turns XML configs into code, letting AI tools like Claude Code drive development. Here's why that means hiring for ServiceNow is about to shift from developers to agent managers."
 tag: "servicenow"
 ---
@@ -51,5 +51,3 @@ The prerequisites are straightforward:
 This is a stepping stone, not the destination. The Fluent SDK will keep adopting more file types. The agent tooling will keep getting better. But the direction is clear: ServiceNow development is becoming AI-augmented and design-led.
 
 The window to adapt is open now. Once the skill gap widens, catching up gets harder.
-
-Start experimenting.

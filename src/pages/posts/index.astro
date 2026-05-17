@@ -32,7 +32,7 @@ const posts = (await getCollection('posts')).sort(
           <div class="post-list-item">
             <span class="work-type">// {post.data.tag}</span>
             <h3>{post.data.title}</h3>
-            <time class="post-date">{post.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+            <time class="post-date">{post.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' })}</time>
             <p>{post.data.description}</p>
             <a href={`/posts/${post.id.replace(/\.md$/, '')}`} class="work-link">read post →</a>
           </div>
