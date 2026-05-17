@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config';
+import 'dotenv/config';
 
 const allowedHost = process.env.TAILSCALE_HOST;
 
