@@ -68,7 +68,10 @@ const posts = await getCollection('posts');
     <!-- Posts -->
     <section id="posts" class="section">
       <div class="section-inner">
-        <h2 class="section-heading">/posts</h2>
+        <div class="posts-heading-wrapper">
+          <h2 class="section-heading">/posts</h2>
+          <a href="/posts/" class="work-link see-all">see all →</a>
+        </div>
         <div class="work-slider" id="work-slider">
           {posts.map((post, i) => (
             <div class:list={['work-card', { active: i === 0 }]} data-index={i}>

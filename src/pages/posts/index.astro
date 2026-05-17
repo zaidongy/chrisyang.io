@@ -1,0 +1,53 @@
+---
+import '../../styles/global.css';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('posts')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>/posts — chrisyang.io</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>" />
+</head>
+<body>
+  <nav class="nav">
+    <a href="/" class="nav-brand">~/chrisyang</a>
+    <div class="nav-links">
+      <a href="/#services">/services</a>
+      <a href="/#about">/about</a>
+    </div>
+  </nav>
+
+  <section class="section posts-list-section">
+    <div class="section-inner">
+      <h2 class="section-heading">/posts</h2>
+      <div class="posts-list">
+        {posts.map((post) => (
+          <div class="post-list-item">
+            <span class="work-type">// {post.data.tag}</span>
+            <h3>{post.data.title}</h3>
+            <time class="post-date">{post.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+            <p>{post.data.description}</p>
+            <a href={`/posts/${post.id.replace(/\.md$/, '')}`} class="work-link">read post →</a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <span>© 2026 Chris Yang. All rights reserved.</span>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/zaidongy/" target="_blank" rel="noopener">linkedin</a>
+      <a href="https://github.com/zaidongy" target="_blank" rel="noopener">github</a>
+      <a href="mailto:chris@chrisyang.io">email</a>
+    </div>
+  </footer>
+</body>
+</html>
