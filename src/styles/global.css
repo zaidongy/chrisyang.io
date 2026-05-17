@@ -253,20 +253,9 @@ body::before {
   border-bottom: 1px solid var(--border);
 }
 
-.posts-heading-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.posts-heading-wrapper .section-heading {
-  margin-bottom: 0;
-  border-bottom: none;
-  padding-bottom: 0;
-}
-
-.posts-heading-wrapper .see-all {
+.work-nav .work-see-all {
   font-size: 13px;
+  margin-left: 8px;
 }
 
 /* Services */

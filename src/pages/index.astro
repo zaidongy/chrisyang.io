@@ -68,10 +68,7 @@ const posts = await getCollection('posts');
     <!-- Posts -->
     <section id="posts" class="section">
       <div class="section-inner">
-        <div class="posts-heading-wrapper">
-          <h2 class="section-heading">/posts</h2>
-          <a href="/posts/" class="work-link see-all">see all →</a>
-        </div>
+        <h2 class="section-heading">/posts</h2>
         <div class="work-slider" id="work-slider">
           {posts.map((post, i) => (
             <div class:list={['work-card', { active: i === 0 }]} data-index={i}>
@@ -89,6 +86,7 @@ const posts = await getCollection('posts');
           <button id="work-prev" aria-label="Previous">&#8592;</button>
           <span class="work-counter"><span id="work-current">1</span> / <span id="work-total">{posts.length}</span></span>
           <button id="work-next" aria-label="Next">&#8594;</button>
+          <a href="/posts/" class="work-link work-see-all">see all →</a>
         </div>
       </div>
     </section>
