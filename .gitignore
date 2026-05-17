@@ -4,3 +4,6 @@ node_modules/
 /.vscode
 /.idx
 /.superpowers/
+.playwright-mcp/
+desktop-wide-*.png
+section-services-wide.png
