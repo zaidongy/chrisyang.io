@@ -1,6 +1,7 @@
 ---
 import '../../styles/global.css';
 import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
 
 export async function getStaticPaths() {
   const posts = await getCollection('posts');
@@ -14,15 +15,7 @@ const { post } = Astro.props;
 const { Content } = await render(post);
 ---
 
-<!doctype html>
-<html lang="en" class="post-page">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>{post.data.title} — chrisyang.io</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>" />
-</head>
-<body class="post-page">
+<Layout title={`${post.data.title} — chrisyang.io`} class="post-page">
   <nav class="nav nav-post">
     <a href="/" class="nav-brand">~/chrisyang</a>
   </nav>
@@ -45,5 +38,4 @@ const { Content } = await render(post);
       <a href="mailto:chris@chrisyang.io">email</a>
     </div>
   </footer>
-</body>
-</html>
+</Layout>

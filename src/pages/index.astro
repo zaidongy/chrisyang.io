@@ -1,125 +1,118 @@
 ---
 import '../styles/global.css';
 import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
 
 const posts = await getCollection('posts');
 ---
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>chrisyang.io</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>" />
-</head>
-<body>
-<div class="screen" id="screen">
-  <div class="prompt-line" id="prompt-line">
-    <span class="prompt-dollar">$</span><span class="prompt-text" id="prompt-text"></span><span class="cursor" id="cursor">_</span>
-  </div>
-  <div class="portfolio" id="portfolio" role="main">
-    <!-- Nav -->
-    <nav class="nav">
-      <a href="#" class="nav-brand" id="nav-home">~/chrisyang</a>
-      <div class="nav-links">
-        <a href="#services">/services</a>
-        <a href="#posts">/posts</a>
-        <a href="#about">/about</a>
-      </div>
-    </nav>
 
-    <!-- Hero -->
-    <section class="hero">
-      <div class="hero-inner">
-        <h1 class="hero-title">chris<span class="green">yang</span></h1>
-        <p class="hero-sub">turning complexity into clarity on the servicenow platform on and off the clock.</p>
-      </div>
-    </section>
-
-    <!-- Services -->
-    <section id="services" class="section">
-      <div class="section-inner">
-        <h2 class="section-heading">/services</h2>
-        <div class="services">
-          <div class="service">
-            <span class="service-num">01</span>
-            <h3>/platform development</h3>
-            <p>Building scalable applications on the ServiceNow platform — from custom apps to integrations that actually work.</p>
-          </div>
-          <div class="service">
-            <span class="service-num">02</span>
-            <h3>/automation & workflows</h3>
-            <p>Designing flows that eliminate manual processes. If you're doing it twice, it should be automated.</p>
-          </div>
-          <div class="service">
-            <span class="service-num">03</span>
-            <h3>/system architecture</h3>
-            <p>Structuring data models, integrations, and governance so the platform doesn't become the problem.</p>
-          </div>
-          <div class="service">
-            <span class="service-num">04</span>
-            <h3>/developer experience</h3>
-            <p>Tooling, CI/CD, and practices that make building on the platform feel like building anywhere else.</p>
-          </div>
+<Layout title="chrisyang.io">
+  <div class="screen" id="screen">
+    <div class="prompt-line" id="prompt-line">
+      <span class="prompt-dollar">$</span><span class="prompt-text" id="prompt-text"></span><span class="cursor" id="cursor">_</span>
+    </div>
+    <div class="portfolio" id="portfolio" role="main">
+      <!-- Nav -->
+      <nav class="nav">
+        <a href="#" class="nav-brand" id="nav-home">~/chrisyang</a>
+        <div class="nav-links">
+          <a href="#services">/services</a>
+          <a href="#posts">/posts</a>
+          <a href="#about">/about</a>
         </div>
-      </div>
-    </section>
+      </nav>
 
-    <!-- Posts -->
-    <section id="posts" class="section">
-      <div class="section-inner">
-        <h2 class="section-heading">/posts</h2>
-        <div class="work-slider" id="work-slider">
-          {posts.map((post, i) => (
-            <div class:list={['work-card', { active: i === 0 }]} data-index={i}>
-              <div class="work-card-header">
-                <span class="work-num">{String(i + 1).padStart(2, '0')}</span>
-                <span class="work-type">// {post.data.tag}</span>
-              </div>
-              <h3>{post.data.title}</h3>
-              <p>{post.data.description}</p>
-              <a href={`/posts/${post.id.replace(/\.md$/, '')}`} class="work-link">read post →</a>
+      <!-- Hero -->
+      <section class="hero">
+        <div class="hero-inner">
+          <h1 class="hero-title">chris<span class="green">yang</span></h1>
+          <p class="hero-sub">turning complexity into clarity on the servicenow platform on and off the clock.</p>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section id="services" class="section">
+        <div class="section-inner">
+          <h2 class="section-heading">/services</h2>
+          <div class="services">
+            <div class="service">
+              <span class="service-num">01</span>
+              <h3>/platform development</h3>
+              <p>Building scalable applications on the ServiceNow platform — from custom apps to integrations that actually work.</p>
             </div>
-          ))}
-        </div>
-        <div class="work-nav">
-          <button id="work-prev" aria-label="Previous">&#8592;</button>
-          <span class="work-counter"><span id="work-current">1</span> / <span id="work-total">{posts.length}</span></span>
-          <button id="work-next" aria-label="Next">&#8594;</button>
-          <a href="/posts/" class="work-link work-see-all">see all →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="section">
-      <div class="section-inner">
-        <h2 class="section-heading">/about</h2>
-        <div class="about-content">
-          <p class="about-bio">
-    <span class="bio-line">12 years deep in ServiceNow</span>
-    <span class="bio-line">Certified Technical Architect</span>
-    <span class="bio-line">2x Knowledge conference speaker</span>
-    <span class="bio-line">AI Native and automating with ServiceNow</span>
-  </p>
-          <div class="about-links">
-            <a href="https://www.linkedin.com/in/zaidongy/" target="_blank" rel="noopener" class="about-link">linkedin -></a>
-            <a href="https://github.com/zaidongy" target="_blank" rel="noopener" class="about-link">github -></a>
-            <a href="mailto:chris@chrisyang.io" class="about-link">email -></a>
+            <div class="service">
+              <span class="service-num">02</span>
+              <h3>/automation & workflows</h3>
+              <p>Designing flows that eliminate manual processes. If you're doing it twice, it should be automated.</p>
+            </div>
+            <div class="service">
+              <span class="service-num">03</span>
+              <h3>/system architecture</h3>
+              <p>Structuring data models, integrations, and governance so the platform doesn't become the problem.</p>
+            </div>
+            <div class="service">
+              <span class="service-num">04</span>
+              <h3>/developer experience</h3>
+              <p>Tooling, CI/CD, and practices that make building on the platform feel like building anywhere else.</p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <span>© 2026 Chris Yang. All rights reserved.</span>
-      <span>built with ☕ and astro</span>
-    </footer>
+      <!-- Posts -->
+      <section id="posts" class="section">
+        <div class="section-inner">
+          <h2 class="section-heading">/posts</h2>
+          <div class="work-slider" id="work-slider">
+            {posts.map((post, i) => (
+              <div class:list={['work-card', { active: i === 0 }]} data-index={i}>
+                <div class="work-card-header">
+                  <span class="work-num">{String(i + 1).padStart(2, '0')}</span>
+                  <span class="work-type">// {post.data.tag}</span>
+                </div>
+                <h3>{post.data.title}</h3>
+                <p>{post.data.description}</p>
+                <a href={`/posts/${post.id.replace(/\.md$/, '')}`} class="work-link">read post →</a>
+              </div>
+            ))}
+          </div>
+          <div class="work-nav">
+            <button id="work-prev" aria-label="Previous">&#8592;</button>
+            <span class="work-counter"><span id="work-current">1</span> / <span id="work-total">{posts.length}</span></span>
+            <button id="work-next" aria-label="Next">&#8594;</button>
+            <a href="/posts/" class="work-link work-see-all">see all →</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="section">
+        <div class="section-inner">
+          <h2 class="section-heading">/about</h2>
+          <div class="about-content">
+            <p class="about-bio">
+      <span class="bio-line">12 years deep in ServiceNow</span>
+      <span class="bio-line">Certified Technical Architect</span>
+      <span class="bio-line">2x Knowledge conference speaker</span>
+      <span class="bio-line">AI Native and automating with ServiceNow</span>
+    </p>
+            <div class="about-links">
+              <a href="https://www.linkedin.com/in/zaidongy/" target="_blank" rel="noopener" class="about-link">linkedin -></a>
+              <a href="https://github.com/zaidongy" target="_blank" rel="noopener" class="about-link">github -></a>
+              <a href="mailto:chris@chrisyang.io" class="about-link">email -></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <span>© 2026 Chris Yang. All rights reserved.</span>
+        <span>built with ☕ and astro</span>
+      </footer>
+    </div>
   </div>
-</div>
-</body>
-</html>
+</Layout>
 
 <script src="../scripts/terminal.js"></script>
 <script src="../scripts/scroll-animations.js"></script>

@@ -460,7 +460,9 @@ html.post-page,
 body.post-page {
   overflow-y: auto;
   overflow-x: hidden;
-  height: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 body.post-page::before {
@@ -637,6 +639,16 @@ body.post-page::before {
 }
 
 .post-list-item .work-link:hover {
+  text-shadow: 0 0 8px rgba(51, 255, 51, 0.4);
+}
+
+.post-list-item h3 a {
+  color: inherit;
+  text-decoration: none;
+  transition: text-shadow 0.2s;
+}
+
+.post-list-item h3 a:hover {
   text-shadow: 0 0 8px rgba(51, 255, 51, 0.4);
 }
 
