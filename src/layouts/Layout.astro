@@ -17,6 +17,16 @@ const { title, class: bodyClass } = Astro.props;
     gtag('js', new Date());
     gtag('config', 'G-W48ETPHDBB');
   </script>
+  <script is:inline>
+    (function() {
+      var theme;
+      try { theme = localStorage.getItem('theme'); } catch(e) {}
+      if (!theme) {
+        theme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      }
+      if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
+    })();
+  </script>
 </head>
 <body class={bodyClass}>
   <slot />

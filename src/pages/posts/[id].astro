@@ -18,6 +18,7 @@ const { Content } = await render(post);
 <Layout title={`${post.data.title} — chrisyang.io`} class="post-page">
   <nav class="nav nav-post">
     <a href="/" class="nav-brand">~/chrisyang</a>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false"></button>
   </nav>
 
   <article class="post-article">
@@ -38,4 +39,5 @@ const { Content } = await render(post);
       <a href="mailto:chris@chrisyang.io">email</a>
     </div>
   </footer>
+  <script src="../../scripts/theme-toggle.js"></script>
 </Layout>

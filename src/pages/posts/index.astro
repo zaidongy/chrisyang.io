@@ -11,6 +11,7 @@ const posts = (await getCollection('posts')).sort(
 <Layout title="/posts — chrisyang.io" class="post-page">
   <nav class="nav">
     <a href="/" class="nav-brand">~/chrisyang</a>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false"></button>
   </nav>
 
   <section class="section posts-list-section">
@@ -38,4 +39,5 @@ const posts = (await getCollection('posts')).sort(
       <a href="mailto:chris@chrisyang.io">email</a>
     </div>
   </footer>
+  <script src="../../scripts/theme-toggle.js"></script>
 </Layout>
