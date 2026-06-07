@@ -12,6 +12,9 @@ export default defineConfig({
   vite: {
     server: {
       allowedHosts: allowedHost ? [allowedHost] : [],
+      fs: {
+        allow: ['..'],
+      },
     },
   },
 });
