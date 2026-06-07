@@ -456,7 +456,11 @@ body::before {
 
 
 /* Post page */
-html.post-page,
+html.post-page {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
 body.post-page {
   overflow-y: auto;
   overflow-x: hidden;
