@@ -10,3 +10,5 @@ section-services-wide.png
 package-lock.json
 .env
 .astro/
+.kilo/
+themes/
