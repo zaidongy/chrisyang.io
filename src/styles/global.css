@@ -468,6 +468,7 @@ html.post-page {
 }
 
 body.post-page {
+  height: auto;
   overflow-y: auto;
   overflow-x: hidden;
   min-height: 100vh;
